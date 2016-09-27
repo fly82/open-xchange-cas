@@ -134,8 +134,9 @@ public class CasConfiguration
             ranges,
             disableTrimLogin,
             formLoginWithoutAuthId,
-            isRandomTokenEnabled);
-        
+            isRandomTokenEnabled,
+            false); // new: checkPunyCodeLoginString
+
         return conf;
     }
 }
