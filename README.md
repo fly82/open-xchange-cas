@@ -14,3 +14,11 @@ Installation:
 7. Place cas-sso.properties in etc/ (in OX directory)
 8. echo "/opt/open-xchange/bundles/de.hofuniversity.iisys.ox.sso@start" > osgi/bundle.d/de.hofuniversity.iisys.ox.sso.ini
 9. Restart Open-XChange
+
+Set an automatic redirect in /opt/open-xchange/etc/as-config.yml:
+
+    default:
+      host: all
+
+      loginLocation: 'http://$HOST/appsuite/api/casauth'
+      logoutLocation: 'http://$HOST/cas/logout'
